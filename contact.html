@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saral Shrestha — Contact</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Contact page specific header gradient */
+        .page-header {
+            background: linear-gradient(135deg, #1a0d28 0%, #28123e 50%, #2d1445 100%);
+        }
+        .page-header h1 {
+            color: #c9a6ff;
+        }
+
+        /* Form field focus ring customisation */
+        .form-control:focus {
+            border-color: #7b5ea7;
+            box-shadow: 0 0 0 3px rgba(123,94,167,0.15);
+        }
+
+        /* Thank-you note after form */
+        .form-thank-note {
+            background: rgba(42,157,143,0.08);
+            border: 1px solid rgba(42,157,143,0.2);
+            border-radius: 8px;
+            padding: 0.9rem 1.2rem;
+            font-size: 0.85rem;
+            color: var(--color-teal);
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Availability badge */
+        .availability-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(76,175,80,0.1);
+            border: 1px solid rgba(76,175,80,0.25);
+            color: #2e7d32;
+            border-radius: 20px;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .avail-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #4caf50;
+            animation: blinkDot 1.5s ease infinite;
+        }
+        @keyframes blinkDot {
+            0%, 100% { opacity: 1; }
+            50%       { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="nav-inner">
+        <a class="nav-logo" href="index.html">Saral<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="interests.html">Interests</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<div class="page-header">
+    <h1>Contact Me</h1>
+    <p>Have a question or want to connect? I'd love to hear from you!</p>
+</div>
+
+<!-- Main Content -->
+<main class="container">
+
+    <div class="contact-grid">
+
+        <!-- Left: Contact Info -->
+        <div class="contact-info animate-slide">
+
+            <!-- Availability -->
+            <div class="availability-badge">
+                <span class="avail-dot"></span>
+                Open to connect
+            </div>
+
+            <h2>Let's Get in Touch</h2>
+
+            <p>
+                Whether you're a fellow student, a teacher, or someone curious about my
+                portfolio project — feel free to reach out! I'm always happy to learn
+                from others and share ideas.
+            </p>
+
+            <!-- Contact Details -->
+            <div class="contact-details">
+
+                <div class="contact-detail-item">
+                    <!-- Inline CSS: icon background personalised -->
+                    <div class="detail-icon" style="background: rgba(230,57,70,0.1);">✉️</div>
+                    <div class="detail-text">
+                        <label>Email Address</label>
+                        <span>saral.shrestha@kavyaschool.edu.np</span>
+                    </div>
+                </div>
+
+                <div class="contact-detail-item">
+                    <div class="detail-icon teal">📞</div>
+                    <div class="detail-text">
+                        <label>Phone Number</label>
+                        <span>+977 9749860750</span>
+                    </div>
+                </div>
+
+                <div class="contact-detail-item">
+                    <div class="detail-icon teal">🏫</div>
+                    <div class="detail-text">
+                        <label>School</label>
+                        <span>Kavya School +2, Kathmandu</span>
+                    </div>
+                </div>
+
+                <div class="contact-detail-item">
+                    <div class="detail-icon gold">📚</div>
+                    <div class="detail-text">
+                        <label>Grade / Stream</label>
+                        <span>Grade 11 — Computer Science</span>
+                    </div>
+                </div>
+
+                <div class="contact-detail-item" style="border-left: 3px solid var(--color-accent);">
+                    <div class="detail-icon" style="background: rgba(72,118,255,0.1);">📍</div>
+                    <div class="detail-text">
+                        <label>Location</label>
+                        <span>Kathmandu, Nepal 🇳🇵</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-section">
+                <h4>Find me on</h4>
+                <div class="social-links">
+                    <a class="social-link" href="https://github.com/saralshrestha" title="GitHub" aria-label="GitHub">
+                        <!-- Simple SVG GitHub icon – no CDN used -->
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color:#555;">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013.01-.4c1.02.005 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a class="social-link" href="#" title="LinkedIn" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color:#0077b5;">
+                            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.43v6.31zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+                        </svg>
+                    </a>
+                    <a class="social-link" href="#" title="Email" aria-label="Email">
+                        <span style="font-size: 1rem;">📧</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form-wrap animate-fade-up delay-2">
+
+            <div class="form-header">
+                <h3>Send Me a Message</h3>
+                <p>Fill in the form below and I'll get back to you as soon as possible.</p>
+            </div>
+
+            <!--
+                NOTE: This form uses the HTML <form> element as required by the project.
+                It does not have a real backend — it is a static HTML form for demonstration.
+                action="#" keeps it on the same page on submit.
+            -->
+            <form action="#" method="POST" id="contact-form">
+
+                <!-- Name & Email Row -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">
+                            Full Name <span class="required">*</span>
+                        </label>
+                        <!-- Inline CSS: slight style difference on required fields -->
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            class="form-control"
+                            placeholder="e.g. Ram Bahadur"
+                            required
+                            style="border-color: rgba(22,22,42,0.15);"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAddr">
+                            Email Address <span class="required">*</span>
+                        </label>
+                        <input
+                            type="email"
+                            id="emailAddr"
+                            name="emailAddr"
+                            class="form-control"
+                            placeholder="you@example.com"
+                            required
+                            style="border-color: rgba(22,22,42,0.15);"
+                        >
+                    </div>
+                </div>
+
+                <!-- Phone (optional) -->
+                <div class="form-group">
+                    <label for="phoneNum">Phone Number <em style="font-size:0.78rem; color:var(--color-muted);">(optional)</em></label>
+                    <input
+                        type="tel"
+                        id="phoneNum"
+                        name="phoneNum"
+                        class="form-control"
+                        placeholder="+977 98XXXXXXXX"
+                    >
+                </div>
+
+                <!-- Subject -->
+                <div class="form-group">
+                    <label for="subject">Subject <span class="required">*</span></label>
+                    <select id="subject" name="subject" class="form-control" required>
+                        <option value="" disabled selected>Select a subject…</option>
+                        <option value="general">General Enquiry</option>
+                        <option value="project">About This Portfolio Project</option>
+                        <option value="collaboration">Collaboration / Ideas</option>
+                        <option value="feedback">Feedback on Website</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        class="form-control"
+                        placeholder="Write your message here…"
+                        required
+                        style="min-height: 150px;"
+                    ></textarea>
+                </div>
+
+                <!-- How did you find me? -->
+                <div class="form-group">
+                    <label for="howFound">How did you find this website?</label>
+                    <input
+                        type="text"
+                        id="howFound"
+                        name="howFound"
+                        class="form-control"
+                        placeholder="e.g. School project submission, friend's recommendation…"
+                    >
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="btn-submit">
+                    📨 &nbsp; Send Message
+                </button>
+
+                <!-- Thank you note -->
+                <div class="form-thank-note">
+                    ✅ Thank you for reaching out! I will reply within 1–2 school days.
+                </div>
+
+                <!-- Form note -->
+                <p class="form-note">
+                    Fields marked with <span style="color:var(--color-accent);">*</span> are required.
+                    Your information will not be shared with anyone.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Location Banner -->
+    <div class="location-section animate-fade-up delay-4">
+        <div class="location-icon">📍</div>
+        <div class="location-text">
+            <h4>Based in Kathmandu, Nepal 🇳🇵</h4>
+            <p>
+                I am a student at Kavya School +2, located in Kathmandu.
+                If you are from my school, you can also find me in class or during breaks!
+            </p>
+        </div>
+    </div>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">Saral Shrestha</div>
+        <ul class="footer-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="interests.html">Interests</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+            &copy; 2082 Saral Shrestha &nbsp;·&nbsp; Grade 11 CS Project &nbsp;·&nbsp; Kavya School +2
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
