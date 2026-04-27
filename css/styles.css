@@ -1,0 +1,386 @@
+/* ============================================
+   styles.css — Global / Shared Stylesheet
+   Portfolio Website — Saral Shrestha
+   Kavya School +2 | Grade 11 CS Project
+   ============================================ */
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+    --bg-primary:    #fafaf7;
+    --bg-secondary:  #f0ede6;
+    --bg-card:       #ffffff;
+
+    --color-dark:    #16162a;
+    --color-text:    #2d2d44;
+    --color-muted:   #8a8a9a;
+
+    --color-accent:  #e63946;
+    --color-teal:    #2a9d8f;
+    --color-gold:    #e9c46a;
+
+    --font-heading:  Georgia, 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    --font-body:     'Trebuchet MS', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --font-mono:     'Courier New', Courier, monospace;
+
+    --radius:        10px;
+    --shadow-sm:     0 2px 8px rgba(22, 22, 42, 0.08);
+    --shadow-md:     0 6px 24px rgba(22, 22, 42, 0.12);
+    --shadow-lg:     0 16px 48px rgba(22, 22, 42, 0.16);
+
+    --transition:    all 0.3s ease;
+    --max-width:     1100px;
+}
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--color-text);
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+    background-color: var(--color-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+
+.nav-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+}
+
+.nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-gold);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+}
+
+.nav-logo:hover {
+    color: #fff;
+}
+
+.nav-logo span {
+    color: var(--color-accent);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #c8c8d8;
+    text-decoration: none;
+    font-size: 0.92rem;
+    padding: 0.45rem 1rem;
+    border-radius: 6px;
+    transition: var(--transition);
+    letter-spacing: 0.3px;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: var(--color-accent);
+    color: #fff;
+}
+
+/* ---------- Page Header Band ---------- */
+.page-header {
+    background: linear-gradient(135deg, var(--color-dark) 0%, #252540 100%);
+    color: #fff;
+    text-align: center;
+    padding: 3.5rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 70% 50%, rgba(230, 57, 70, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 30% 50%, rgba(42, 157, 143, 0.10) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.page-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    color: var(--color-gold);
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.page-header p {
+    color: #b0b0c8;
+    font-size: 1rem;
+    position: relative;
+}
+
+/* ---------- Container ---------- */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* ---------- Section Title ---------- */
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--color-dark);
+    margin-bottom: 0.4rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 2px;
+    margin-top: 6px;
+}
+
+.section-subtitle {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+    margin-top: 0.4rem;
+}
+
+/* ---------- Cards ---------- */
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 2rem;
+    transition: var(--transition);
+    border: 1px solid rgba(22, 22, 42, 0.06);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+/* ---------- Tag / Badge ---------- */
+.tag {
+    display: inline-block;
+    background: var(--bg-secondary);
+    color: var(--color-text);
+    border-radius: 20px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.tag-accent {
+    background: rgba(230, 57, 70, 0.1);
+    color: var(--color-accent);
+}
+
+.tag-teal {
+    background: rgba(42, 157, 143, 0.1);
+    color: var(--color-teal);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    letter-spacing: 0.3px;
+}
+
+.btn-primary {
+    background: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+    background: #c1121f;
+    border-color: #c1121f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.35);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-dark);
+    border-color: var(--color-dark);
+}
+
+.btn-outline:hover {
+    background: var(--color-dark);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: var(--color-dark);
+    color: #9898b0;
+    margin-top: auto;
+}
+
+.footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-brand {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-gold);
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.footer-links a {
+    color: #9898b0;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--color-gold);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-bottom-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.82rem;
+    color: #606078;
+}
+
+/* ---------- Divider ---------- */
+.divider {
+    border: none;
+    border-top: 1px solid rgba(22, 22, 42, 0.08);
+    margin: 2.5rem 0;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-up  { animation: fadeInUp  0.6s ease both; }
+.animate-fade     { animation: fadeIn    0.6s ease both; }
+.animate-slide    { animation: slideInLeft 0.6s ease both; }
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .nav-inner {
+        padding: 0 1rem;
+        height: 60px;
+    }
+    .nav-logo {
+        font-size: 1.1rem;
+    }
+    .nav-links a {
+        padding: 0.4rem 0.65rem;
+        font-size: 0.85rem;
+    }
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    .container {
+        padding: 2rem 1rem;
+    }
+    .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

@@ -1,0 +1,259 @@
+/* ============================================
+   skills.css — Skills Page Styles
+   Portfolio Website — Saral Shrestha
+   ============================================ */
+
+/* ---------- Skills Introduction ---------- */
+.skills-intro {
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+
+.skills-intro p {
+    color: var(--color-text);
+    line-height: 1.8;
+    margin-top: 1rem;
+}
+
+/* ---------- Skills Grid ---------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+/* ---------- Skill Category Card ---------- */
+.skill-category {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(22,22,42,0.07);
+    transition: var(--transition);
+    animation: fadeInUp 0.5s ease both;
+}
+
+.skill-category:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.6rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--bg-secondary);
+}
+
+.category-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.icon-red    { background: rgba(230, 57, 70, 0.12); }
+.icon-teal   { background: rgba(42, 157, 143, 0.12); }
+.icon-gold   { background: rgba(233, 196, 106, 0.2); }
+.icon-blue   { background: rgba(72, 118, 255, 0.12); }
+
+.category-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-dark);
+}
+
+/* ---------- Skill Bar ---------- */
+.skill-item {
+    margin-bottom: 1.2rem;
+}
+
+.skill-item:last-child {
+    margin-bottom: 0;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.4rem;
+}
+
+.skill-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.skill-level {
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+}
+
+/* Progress bar track */
+.skill-bar {
+    height: 8px;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Progress bar fill — width set via inline style on each bar */
+.skill-fill {
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--color-accent), #ff6b6b);
+    transition: width 1s ease;
+    animation: growBar 1s ease both;
+}
+
+.skill-fill.teal {
+    background: linear-gradient(90deg, var(--color-teal), #52c9bf);
+}
+
+.skill-fill.gold {
+    background: linear-gradient(90deg, #c9a227, var(--color-gold));
+}
+
+.skill-fill.blue {
+    background: linear-gradient(90deg, #3a6fe0, #6b9fff);
+}
+
+@keyframes growBar {
+    from { width: 0 !important; }
+}
+
+/* ---------- Legend Row ---------- */
+.skill-legend {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--color-muted);
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.legend-dot.beginner     { background: #f4a261; }
+.legend-dot.intermediate { background: var(--color-teal); }
+.legend-dot.advanced     { background: var(--color-accent); }
+
+/* ---------- Tools Section ---------- */
+.tools-section {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-top: 0.5rem;
+}
+
+.tools-section h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-dark);
+    margin-bottom: 1.2rem;
+}
+
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.tool-badge {
+    background: var(--bg-card);
+    border: 1px solid rgba(22,22,42,0.1);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.88rem;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.tool-badge:hover {
+    background: var(--color-dark);
+    color: #fff;
+    border-color: var(--color-dark);
+    transform: translateY(-2px);
+}
+
+.tool-badge .tool-icon {
+    font-size: 1rem;
+}
+
+/* ---------- Soft Skills ---------- */
+.soft-skills-section {
+    margin-top: 3rem;
+}
+
+.soft-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.soft-skill-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.2rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(22,22,42,0.07);
+    transition: var(--transition);
+}
+
+.soft-skill-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.soft-icon {
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+    display: block;
+}
+
+.soft-skill-card h4 {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    margin-bottom: 0.3rem;
+}
+
+.soft-skill-card p {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    line-height: 1.5;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .soft-skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
