@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saral Shrestha — About</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Scroll indicator on hero */
+        .scroll-hint {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.35);
+            font-size: 0.78rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            animation: bounceDown 2s ease infinite;
+        }
+        .scroll-hint::after {
+            content: '↓';
+            font-size: 1rem;
+        }
+        @keyframes bounceDown {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50%       { transform: translateX(-50%) translateY(8px); }
+        }
+
+        /* Page intro strip */
+        .intro-strip {
+            background: var(--color-accent);
+            color: #fff;
+            text-align: center;
+            padding: 0.65rem 1rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* Floating decorative text in hero */
+        .hero-bg-text {
+            position: absolute;
+            font-family: var(--font-heading);
+            font-size: 11rem;
+            color: rgba(255,255,255,0.03);
+            font-weight: bold;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            white-space: nowrap;
+            letter-spacing: -4px;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="nav-inner">
+        <a class="nav-logo" href="index.html">Saral<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="interests.html">Interests</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Inline CSS example — announcement strip -->
+<div class="intro-strip" style="font-weight: 600; background: linear-gradient(90deg, #e63946, #c1121f);">
+    🎓 Grade 11 CS Portfolio Project — Kavya School +2, 2082
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <!-- Inline CSS on this decorative element -->
+    <div class="hero-bg-text" aria-hidden="true" style="opacity: 0.025; letter-spacing: -6px;">SARAL</div>
+
+    <div class="hero-inner">
+        <!-- Left: Text Content -->
+        <div class="hero-text">
+
+            <div class="hero-greeting animate-fade delay-1">
+                <span class="dot"></span>
+                Available for collaboration
+            </div>
+
+            <h1 class="hero-name animate-fade-up delay-1">
+                Hi, I'm<br>
+                <span class="highlight">Saral Shrestha</span>
+            </h1>
+
+            <p class="hero-title animate-fade-up delay-2">
+                &lt; Student · Web Developer in Training /&gt;
+            </p>
+
+            <p class="hero-bio animate-fade-up delay-3">
+                A passionate Grade 11 Computer Science student at Kavya School +2,
+                Kathmandu. I love exploring technology, building things with code,
+                and constantly learning new concepts that shape the digital world.
+            </p>
+
+            <blockquote class="hero-quote animate-fade-up delay-4">
+                "The journey of a thousand miles begins with a single line of code."
+            </blockquote>
+
+            <div class="hero-buttons animate-fade-up delay-5">
+                <a href="skills.html" class="btn btn-primary">View My Skills</a>
+                <a href="contact.html" class="btn btn-outline" style="color: #d0d0e0; border-color: rgba(255,255,255,0.25);">Get in Touch</a>
+            </div>
+
+        </div>
+
+        <!-- Right: Profile Card -->
+        <div class="hero-card">
+            <div class="profile-card">
+                <!-- Inline CSS: avatar gradient is personalized -->
+                <img src="saral.jpg.jpeg" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:4px solid rgba(255,255,255,0.15);">
+                <p class="profile-name">Saral Shrestha</p>
+                <p class="profile-role">Computer Science Student</p>
+
+                <ul class="profile-info-list">
+                    <li>
+                        <span class="info-icon">🎂</span>
+                        17 years old
+                    </li>
+                    <li>
+                        <span class="info-icon">🏫</span>
+                        Kavya School +2
+                    </li>
+                    <li>
+                        <span class="info-icon">📚</span>
+                        Grade 11 — Computer Science
+                    </li>
+                    <li>
+                        <span class="info-icon">📍</span>
+                        Kathmandu, Nepal
+                    </li>
+                    <li>
+                        <span class="info-icon">💡</span>
+                        Passionate about Technology
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">Scroll</div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+    <div class="about-grid">
+
+        <!-- Left: Stats -->
+        <div>
+            <h2 class="section-title animate-slide">Quick Facts</h2>
+            <p class="section-subtitle">A snapshot of who I am</p>
+
+            <div class="stats-grid">
+                <!-- Inline CSS for individual stat accent colours -->
+                <div class="stat-card animate-fade-up delay-1">
+                    <span class="stat-number" style="color: #e63946;">17</span>
+                    <span class="stat-label">Years Old</span>
+                </div>
+                <div class="stat-card animate-fade-up delay-2">
+                    <span class="stat-number" style="color: #2a9d8f;">11</span>
+                    <span class="stat-label">Grade Level</span>
+                </div>
+                <div class="stat-card animate-fade-up delay-3">
+                    <span class="stat-number" style="color: #e9c46a;">5+</span>
+                    <span class="stat-label">Skills Learning</span>
+                </div>
+                <div class="stat-card animate-fade-up delay-4">
+                    <span class="stat-number" style="color: #4876ff;">∞</span>
+                    <span class="stat-label">Curiosity</span>
+                </div>
+            </div>
+
+            <!-- Education Card -->
+            <div class="edu-card animate-fade-up delay-3" style="margin-top: 1.8rem;">
+                <h4>📘 Current Education</h4>
+                <p><strong>Kavya School +2</strong></p>
+                <p>Grade 11 — Science (Computer Science)</p>
+                <p>Kathmandu, Nepal &nbsp;·&nbsp; 2082 B.S.</p>
+            </div>
+        </div>
+
+        <!-- Right: About Details -->
+        <div class="about-details">
+            <h2 class="animate-fade-up delay-1">About Me</h2>
+
+            <p class="animate-fade-up delay-2">
+                Hello! My name is <strong>Saral Shrestha</strong> and I am a 17-year-old student
+                currently studying Computer Science in Grade 11 at Kavya School +2, Kathmandu, Nepal.
+                I am passionate about technology and how it shapes the world around us.
+            </p>
+
+            <p class="animate-fade-up delay-3">
+                My journey into programming started with curiosity — I wanted to understand
+                how websites and applications work. This portfolio project is a reflection
+                of my first steps in web development, where I have been learning HTML and CSS
+                to bring ideas to life on the screen.
+            </p>
+
+            <p class="animate-fade-up delay-4">
+                Beyond academics, I enjoy reading, playing cricket, and exploring the latest
+                trends in technology. I believe in working hard, staying curious, and embracing
+                challenges as opportunities to grow. I am excited about a future in the world
+                of computing and software development.
+            </p>
+
+            <!-- Tags with inline style tweaks -->
+            <div class="about-tags animate-fade-up delay-5">
+                <span class="tag tag-accent">Web Development</span>
+                <span class="tag tag-teal">Computer Science</span>
+                <span class="tag" style="background:#f0f4ff; color:#4876ff;">Problem Solving</span>
+                <span class="tag" style="background:#f0fff8; color:#2a9d8f;">Critical Thinking</span>
+                <span class="tag">Table Tennis 🏓</span>
+                <span class="tag">City Explorer 🏙️</span>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Goal Statement -->
+            <div style="background: var(--bg-secondary); border-radius: var(--radius); padding: 1.5rem; border-left: 4px solid var(--color-teal);">
+                <h4 style="font-family: var(--font-heading); color: var(--color-dark); margin-bottom: 0.5rem;">🎯 My Goal</h4>
+                <p style="color: var(--color-text); font-size: 0.95rem; line-height: 1.75;">
+                    To develop a strong foundation in computer science and web development,
+                    pursue higher education in technology, and one day contribute to building
+                    meaningful digital solutions for the people of Nepal and beyond.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">Saral Shrestha</div>
+        <ul class="footer-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="interests.html">Interests</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+            &copy; 2082 Saral Shrestha &nbsp;·&nbsp; Grade 11 CS Project &nbsp;·&nbsp; Kavya School +2
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

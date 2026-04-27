@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saral Shrestha — Interests & Hobbies</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/interests.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Interests page specific header colour */
+        .page-header {
+            background: linear-gradient(135deg, #0a2018 0%, #0d2e1e 50%, #122a20 100%);
+        }
+        .page-header h1 {
+            color: #6ed9a0;
+        }
+
+        /* Stagger hobby cards */
+        .hobby-card:nth-child(1) { animation-delay: 0.05s; }
+        .hobby-card:nth-child(2) { animation-delay: 0.12s; }
+        .hobby-card:nth-child(3) { animation-delay: 0.20s; }
+        .hobby-card:nth-child(4) { animation-delay: 0.28s; }
+        .hobby-card:nth-child(5) { animation-delay: 0.36s; }
+        .hobby-card:nth-child(6) { animation-delay: 0.44s; }
+
+        /* Special highlight on hobby card hover text */
+        .hobby-card:hover h3 {
+            color: var(--color-accent);
+            transition: color 0.3s ease;
+        }
+
+        /* Page break quote */
+        .interest-quote {
+            text-align: center;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--color-muted);
+            font-style: italic;
+            margin: 3rem 0;
+            padding: 2rem;
+            border-top: 1px solid var(--bg-secondary);
+            border-bottom: 1px solid var(--bg-secondary);
+        }
+        .interest-quote strong {
+            color: var(--color-dark);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="nav-inner">
+        <a class="nav-logo" href="index.html">Saral<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="interests.html" class="active">Interests</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<div class="page-header">
+    <h1>Interests & Hobbies</h1>
+    <p>What excites me beyond the classroom</p>
+</div>
+
+<!-- Main Content -->
+<main class="container">
+
+    <!-- Intro -->
+    <div class="interests-intro animate-fade-up">
+        <h2 class="section-title">My Passions</h2>
+        <p class="section-subtitle">The things that keep me curious and motivated every day</p>
+        <p>
+            Life is more than just school and grades — it's about the experiences, curiosity,
+            and passions that shape who we are. Here are the things I love, explore, and
+            spend my free time on.
+        </p>
+    </div>
+
+    <!-- Featured Interest: Technology -->
+    <div class="featured-interest animate-fade-up delay-1">
+        <div>
+            <span class="featured-label">⭐ My #1 Passion</span>
+            <h2>Table Tennis</h2>
+            <p>
+                Table tennis is where I truly shine. I have developed a strong skill in the sport
+                over the years — even my teacher Pradeep Sir recognises my ability at the table!
+                I love the speed, reflexes, and strategy involved. It keeps me sharp both physically
+                and mentally, and is my favourite way to unwind after a long day of studying.
+            </p>
+        </div>
+        <!-- Inline CSS: custom font size for the hero emoji -->
+        <div class="featured-emoji" style="font-size: 6rem; animation: bounceIn 0.8s ease both;">
+            🏓
+        </div>
+    </div>
+
+    <!-- Hobby Cards Grid -->
+    <div class="hobbies-grid">
+
+        <!-- Roaming the City -->
+        <div class="hobby-card red animate-fade-up">
+            <div class="hobby-emoji-wrap bg-red">🏙️</div>
+            <h3>City Roaming</h3>
+            <p>
+                I love roaming around Kathmandu, discovering hidden lanes, local food spots,
+                and experiencing the city from a fresh perspective every time I step outside.
+                Every corner has a story.
+            </p>
+        </div>
+
+        <!-- Trying New Things -->
+        <div class="hobby-card teal animate-fade-up">
+            <div class="hobby-emoji-wrap bg-teal">✨</div>
+            <h3>New Experiences</h3>
+            <p>
+                I believe life is too short to stick to a routine. Whether it's trying a
+                new dish, visiting a new place, or picking up a new skill — I actively
+                seek out experiences that broaden my perspective.
+            </p>
+        </div>
+
+        <!-- Technology -->
+        <div class="hobby-card gold animate-fade-up">
+            <div class="hobby-emoji-wrap bg-gold">💻</div>
+            <h3>Technology</h3>
+            <p>
+                Exploring how software, websites, and gadgets work fascinates me.
+                I spend time reading tech news, watching tutorials, and experimenting
+                with code in my free time.
+            </p>
+        </div>
+
+        <!-- Music -->
+        <div class="hobby-card blue animate-fade-up">
+            <!-- Inline CSS: custom background on this card -->
+            <div class="hobby-emoji-wrap bg-blue" style="border-radius: 50%;">🎵</div>
+            <h3>Music</h3>
+            <p>
+                Music is my constant companion — Nepali folk, lo-fi beats, and everything
+                in between. It keeps me focused during study sessions and energised during
+                long days.
+            </p>
+        </div>
+
+        <!-- Reading -->
+        <div class="hobby-card green animate-fade-up">
+            <div class="hobby-emoji-wrap bg-green">📚</div>
+            <h3>Reading</h3>
+            <p>
+                I enjoy books on technology, science, and personal growth. Reading about
+                the lives of great innovators inspires me to keep pushing my own
+                boundaries and learning every day.
+            </p>
+        </div>
+
+        <!-- Lifelong Learning -->
+        <div class="hobby-card purple animate-fade-up">
+            <div class="hobby-emoji-wrap bg-purple">🔭</div>
+            <h3>Lifelong Learning</h3>
+            <p>
+                Watching educational videos, exploring online courses, and picking up
+                something new every week keeps my curiosity alive. Knowledge is the
+                greatest thing one can collect.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Mid-page quote -->
+    <blockquote class="interest-quote animate-fade">
+        "Passion is energy. <strong>Feel the power that comes from focusing on what excites you.</strong>"
+        <br><small style="font-size: 0.78rem; font-style: normal; color: var(--color-muted);">— Oprah Winfrey</small>
+    </blockquote>
+
+    <!-- Fun Facts Section -->
+    <div class="fun-facts animate-fade-up">
+        <h3>
+            <span style="font-size: 1.4rem;">🎉</span>
+            Fun Facts About Me
+        </h3>
+
+        <ul class="facts-list">
+            <li>
+                <span class="fact-bullet">1</span>
+                My table tennis skills are good enough that even Pradeep Sir has taken notice — that means a lot to me!
+            </li>
+            <li>
+                <span class="fact-bullet">2</span>
+                I love roaming Kathmandu without a plan — some of my best memories happened when I just wandered.
+            </li>
+            <li>
+                <span class="fact-bullet">3</span>
+                I have watched more than 100 hours of programming tutorials and still feel like a beginner — and that's the beauty of it!
+            </li>
+            <li>
+                <span class="fact-bullet">4</span>
+                Table tennis and coding both teach the same lesson: reflexes (quick thinking) win games.
+            </li>
+            <li>
+                <span class="fact-bullet">5</span>
+                I want to develop a mobile app someday that is genuinely useful for students in Nepal.
+            </li>
+            <li>
+                <span class="fact-bullet">6</span>
+                My favourite quote: <em>"First, solve the problem. Then, write the code."</em>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Future Interests -->
+    <div style="margin-top: 3rem;" class="animate-fade-up delay-3">
+        <h2 class="section-title">What I Want to Learn Next</h2>
+        <p class="section-subtitle">My roadmap for the near future</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem;">
+            <!-- Inline CSS on each future interest tag -->
+            <span class="tag" style="background: rgba(230,57,70,0.1); color: var(--color-accent); padding: 0.5rem 1.1rem; font-size: 0.9rem;">
+                🖥️ JavaScript
+            </span>
+            <span class="tag" style="background: rgba(42,157,143,0.1); color: var(--color-teal); padding: 0.5rem 1.1rem; font-size: 0.9rem;">
+                🐍 Advanced Python
+            </span>
+            <span class="tag" style="background: rgba(72,118,255,0.1); color: #4876ff; padding: 0.5rem 1.1rem; font-size: 0.9rem;">
+                📱 Mobile App Dev
+            </span>
+            <span class="tag" style="background: rgba(233,196,106,0.15); color: #9a7500; padding: 0.5rem 1.1rem; font-size: 0.9rem;">
+                🤖 Artificial Intelligence
+            </span>
+            <span class="tag" style="background: rgba(123,94,167,0.1); color: #7b5ea7; padding: 0.5rem 1.1rem; font-size: 0.9rem;">
+                🗄️ Databases
+            </span>
+            <span class="tag" style="background: rgba(82,183,136,0.1); color: #2d8a5e; padding: 0.5rem 1.1rem; font-size: 0.9rem;">
+                ☁️ Cloud Computing
+            </span>
+        </div>
+    </div>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">Saral Shrestha</div>
+        <ul class="footer-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="interests.html">Interests</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+            &copy; 2082 Saral Shrestha &nbsp;·&nbsp; Grade 11 CS Project &nbsp;·&nbsp; Kavya School +2
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
